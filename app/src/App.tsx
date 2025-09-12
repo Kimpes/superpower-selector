@@ -2,16 +2,23 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 function App() {
-  const [message, setMessage] = useState("");
+  const [powers, setPowers] = useState([]);
 
   useEffect(() => {
     axios
       .get("/api")
-      .then((res) => setMessage(res.data.message))
+      .then((res) => setPowers(res.data))
       .catch((err) => console.error(err));
   }, []);
 
-  return <h1>{message || "Loading..."}</h1>;
+  return (
+    <div>
+      {powers &&
+        powers.map((power, i) => {
+          return <div key={i}>{`${power}`}</div>;
+        })}
+    </div>
+  );
 }
 
 export default App;

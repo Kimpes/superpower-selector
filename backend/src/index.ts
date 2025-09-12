@@ -1,9 +1,10 @@
 import express from "express";
+import { getAllPowers } from "./db/read";
 const app = express();
 const PORT = 3000;
 
 app.get("/api", (_, res) => {
-  res.json({ message: "Hello from backend!" });
+  res.json(getAllPowers());
 });
 
 app.listen(PORT, () => {
