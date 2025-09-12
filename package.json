@@ -1,0 +1,17 @@
+{
+  "name": "superpower-selector",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Kimpes/superpower-selector.git",
+  "author": "Filip Gustafsson <filip.gustafsson@divid.se>",
+  "license": "MIT",
+  "dependencies": {
+    "node": "^24.8.0",
+    "vite": "^7.1.5"
+  },
+  "scripts": {
+    "start-backend": "cd backend && yarn dev",
+    "start-app": "cd app && yarn dev",
+    "start": "npm run start-backend & npm run start-app"
+  }
+}
