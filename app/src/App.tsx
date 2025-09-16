@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import type { Power } from "@shared/types";
 
 function App() {
-  const [powers, setPowers] = useState([]);
+  const [powers, setPowers] = useState(Array<Power>);
 
   useEffect(() => {
     axios
